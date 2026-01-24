@@ -1,6 +1,6 @@
 # Programming Principles 2 - 2026, Spring Semester
 
-<p align="center">
+<p align="left">
 	<img src="assets/KBTU.avif" alt="University Logo" width="160" />
 </p>
 

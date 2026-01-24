@@ -2,7 +2,7 @@
 
 PP2 2026 — Spring Semester — Practice Exercises, Kazakh-British Technical University
 
-This repository is a collection of Python “practice snippets” that cover the **core Python basics** taught in an **Programming Principles II** course under by **Akbota Mautkazy** Lecturer. Our university requires us to upload all practice examples/snippet codes that cover the basic topics (aligned with the Python basics learning path on W3Schools).
+This repository is a collection of Python “practice snippets” that cover the **core Python basics** taught in an **Programming Principles II** course. This course requires us to upload all practice examples/snippet codes that cover the basic topics (aligned with the Python basics learning path on W3Schools).
 
 ## What’s inside
 
@@ -44,4 +44,4 @@ If you’re following Python basics in a structured way, this order usually work
 
 ## License / usage
 
-Educational use. If you reuse code, please keep attribution to this repository (course practice collection).
+Educational use.

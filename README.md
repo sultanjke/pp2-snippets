@@ -1,7 +1,11 @@
 # Programming Principles 2 - 2026, Spring Semester
 
 <p align="left">
+<<<<<<< HEAD
 	<img src="assets/KBTU.avif" alt="University Logo" width="160" />
+=======
+	<img src="assets/KBTU.avif" alt="University Logo" width="220" />
+>>>>>>> 225e3ce3e84533984021adc3018a0cb8e33b464c
 </p>
 
 PP2 2026 — Spring Semester, Practice Collection

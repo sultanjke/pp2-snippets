@@ -1,12 +1,12 @@
 # Programming Principles 2 - 2026, Spring Semester
 
-<p align="center">
+<p align="left">
 	<img src="assets/KBTU.avif" alt="University Logo" width="160" />
 </p>
 
 PP2 2026 — Spring Semester, Practice Collection
 
-This repository is a collection of Python “practice snippets” that cover the **core Python basics** taught in an **Programming Principles II** course. This course requires us to upload all practice examples/snippet codes that cover the basic topics (aligned with the Python basics learning path on W3Schools).
+This repository is a collection of Python “practice snippets” that cover the **core Python basics** taught in an **Programming Principles II** course. This course requires us to upload all practice examples/snippet codes that cover the basic topics (aligned with the Python basics learning path on [W3Schools](https://www.w3schools.com/python/)).
 
 ## What’s inside
 

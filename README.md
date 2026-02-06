@@ -29,17 +29,6 @@ python "Practice 01/strings/split.py"
 1. Open a `.py` file.
 2. Use **Run Python File** (top-right play button) or the VS Code Run menu.
 
-## Suggested learning order
-
-If you’re following Python basics in a structured way, this order usually works well:
-
-1. Getting started → execution
-2. Syntax → indentation, comments, variables
-3. Data types → built-in types overview
-4. Numbers → int/float/complex, conversions
-5. Strings → slicing, escape chars, split
-6. Casting → `int()`, `float()`, `str()`
-
 ## Repository goal
 
 - Keep examples small and easy to review

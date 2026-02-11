@@ -1,4 +1,4 @@
-# Programming Principles 2 Python Snippets
+# Programming Principles 2
 
 <p align="left">
 	<img src="assets/KBTU.avif" alt="University Logo" width="220" />

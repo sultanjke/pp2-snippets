@@ -35,6 +35,6 @@ python "Practice 01/strings/split.py"
 - Provide quick reference code for each basic topic
 - Support course submission requirements
 
-## License / usage
+## Usage
 
 Educational use.

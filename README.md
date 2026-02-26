@@ -14,6 +14,7 @@ This repository is a collection of Python "practice snippets" that cover the **c
 - [Practice 02 — Control Flow & Logic](#practice-02--control-flow--logic)
 - [Practice 03 — Functions & OOP](#practice-03--functions--oop)
 - [Practice 04 — Iterators & Generators](#practice-04--iterators--generators)
+- [Practice 05 — Regular Expressions](#practice-05--regular-expressions)
 - [Repository Structure](#repository-structure)
 
 ---
@@ -74,6 +75,16 @@ This repository is a collection of Python "practice snippets" that cover the **c
 
 ---
 
+## Practice 05 — Regular Expressions
+
+> Pattern matching, text searching, and string manipulation with Python's `re` module.
+
+| # | Topic | Description | Files | Path |
+|---|-------|-------------|:-----:|------|
+| 1 | **RegEx** | Metacharacters, special sequences, sets, quantifiers, `re.search()`, `re.match()`, `re.findall()`, `re.split()`, `re.sub()`, flags (`IGNORECASE`, `MULTILINE`, `DOTALL`, `VERBOSE`), practical validators | 4 | [`Practice 05/regex/`](Practice%2005/regex/) |
+
+---
+
 ## How to Run
 
 ### Option A: Run a single file
@@ -126,6 +137,10 @@ programming-principles-2/
 │		├── date.py
 │		├── generators.py
 │		└── math.py
+├── Practice 05/             # Regular Expressions (4 files)
+│   ├── regex/
+│	├── raw.txt # 2.2 Practical Exercise: Receipt
+│	└── receipt_parser.py # 2.2 Practical Exercise: Receipt Parsing (prices, product names, payment method)
 └── README.md
 ```
 

@@ -1,0 +1,67 @@
+{
+  "university": "KBTU",
+  "department": "Computer Science",
+  "semester": "Spring 2026",
+  "students": [
+    {
+      "id": 1,
+      "name": "Sultan Mecheyev",
+      "age": 20,
+      "gpa": 3.8,
+      "courses": ["Programming Principles II", "Algorithms & Data Structures", "Linear Algebra"],
+      "is_active": true,
+      "address": {
+        "city": "Atyrau",
+        "country": "Kazakhstan"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Aisha Bekova",
+      "age": 19,
+      "gpa": 3.5,
+      "courses": ["Programming Principles II", "Databases", "Calculus II"],
+      "is_active": true,
+      "address": {
+        "city": "Astana",
+        "country": "Kazakhstan"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Damir Omarov",
+      "age": 21,
+      "gpa": 2.9,
+      "courses": ["Programming Principles II", "IT Infrastructure and Computer Networks"],
+      "is_active": false,
+      "address": {
+        "city": "Almaty",
+        "country": "Kazakhstan"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Laura Kim",
+      "age": 20,
+      "gpa": 3.95,
+      "courses": ["Programming Principles II", "Introduction to Machine Learning", "Statistics", "Algorithms & Data Structures"],
+      "is_active": true,
+      "address": {
+        "city": "Shymkent",
+        "country": "Kazakhstan"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Arman Sagynov",
+      "age": 22,
+      "gpa": 3.2,
+      "courses": ["Programming Principles II", "Operating Systems based on Huawei"],
+      "is_active": true,
+      "address": {
+        "city": "Almaty",
+        "country": "Kazakhstan"
+      }
+    }
+  ]
+}

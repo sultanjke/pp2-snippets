@@ -13,6 +13,7 @@ This repository is a collection of Python "practice snippets" that cover the **c
 - [Practice 01 — Python Fundamentals](#practice-01--python-fundamentals)
 - [Practice 02 — Control Flow & Logic](#practice-02--control-flow--logic)
 - [Practice 03 — Functions & OOP](#practice-03--functions--oop)
+- [Practice 04 — Iterators & Generators](#practice-04--iterators--generators)
 - [Repository Structure](#repository-structure)
 
 ---
@@ -60,6 +61,19 @@ This repository is a collection of Python "practice snippets" that cover the **c
 
 ---
 
+## Practice 04 — Iterators & Generators
+
+> Lazy evaluation, custom iterators, generator functions, generator expressions, dates, timezones, math, and JSON.
+
+| # | Topic | Description | Files | Path |
+|---|-------|-------------|:-----:|------|
+| 1 | **Iterators & Generators** | `iter()` & `next()`, looping through iterators, custom iterator classes (`__iter__`/`__next__`), `yield` keyword, generator functions & pipelines, generator expressions, memory efficiency | 4 | [`Practice 04/iterators-and-generators/`](Practice%2004/iterators-and-generators/) |
+| 2 | **Dates & Times** | `datetime` module, creating date/time objects, `strftime()` & `strptime()` formatting, `timedelta` for time differences, timezone conversions | 4 | [`Practice 04/dates-and-times/`](Practice%2004/dates-and-times/) |
+| 3 | **Math** | Built-in math functions (`min`, `max`, `abs`, `round`, `pow`), `math` module (`sqrt`, `ceil`, `floor`, trig, `pi`, `e`), `random` module (`randint`, `choice`, `shuffle`, `sample`) | 3 | [`Practice 04/math/`](Practice%2004/math/) |
+| 4 | **JSON** | JSON syntax, `json.loads()` parsing, `json.dumps()` converting, reading & writing JSON files, working with JSON data from `sample-data.json` | 4 | [`Practice 04/json/`](Practice%2004/json/) |
+
+---
+
 ## How to Run
 
 ### Option A: Run a single file
@@ -102,6 +116,11 @@ programming-principles-2/
 │   ├── lambda/              #   Lambda, map, filter, sorted
 │   ├── classes/             #   Classes, __init__, self, properties
 │   └── inheritance/         #   super(), overriding, ABC
+├── Practice 04/             # Iterators, Generators, Dates, Math & JSON (15 files)
+│   ├── iterators-and-generators/
+│   ├── dates-and-times/
+│   ├── math/
+│   └── json/
 └── README.md
 ```
 

@@ -98,29 +98,34 @@ programming-principles-2/
 ├── assets/
 │   └── KBTU.avif
 ├── Practice 01/             # Python Fundamentals (28 files)
-│   ├── syntax/              #   Indentation, comments, variables
-│   ├── variables/           #   Assignment, global, type()
-│   ├── data-types/          #   Built-in type overview
-│   ├── numbers/             #   int, float, complex, random
-│   ├── casting/             #   int(), float(), str()
-│   ├── strings/             #   Slicing, splitting, escape chars
-│   └── comments/            #   Single-line, multi-line
+│   ├── syntax/
+│   ├── variables/
+│   ├── data-types/
+│   ├── numbers/
+│   ├── casting/
+│   ├── strings/
+│   └── comments/
 ├── Practice 02/             # Control Flow & Logic (27 files)
-│   ├── boolean/             #   bool(), truthy/falsy, isinstance
-│   ├── operators/           #   Comparison, logical, walrus
-│   ├── if-else/             #   Conditionals, match-case, pass
-│   ├── for-loops/           #   Iteration, range, break/continue
-│   └── while-loops/         #   While, break, continue, else
+│   ├── boolean/
+│   ├── operators/
+│   ├── if-else/
+│   ├── for-loops/
+│   └── while-loops/
 ├── Practice 03/             # Functions & OOP (16 files)
-│   ├── functions/           #   def, args, return, docstrings
-│   ├── lambda/              #   Lambda, map, filter, sorted
-│   ├── classes/             #   Classes, __init__, self, properties
-│   └── inheritance/         #   super(), overriding, ABC
+│   ├── functions/
+│   ├── lambda/
+│   ├── classes/
+│   └── inheritance/
 ├── Practice 04/             # Iterators, Generators, Dates, Math & JSON (15 files)
 │   ├── iterators-and-generators/
 │   ├── dates-and-times/
 │   ├── math/
-│   └── json/
+│   ├── json/
+│	└── exercises/
+│		├── json/
+│		├── date.py
+│		├── generators.py
+│		└── math.py
 └── README.md
 ```
 

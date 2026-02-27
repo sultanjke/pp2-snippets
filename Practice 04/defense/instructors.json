@@ -1,0 +1,30 @@
+[
+  {
+    "id": "I001",
+    "name": "Beisenbek Baisakov",
+    "faculty": "SITE",
+    "course_name": "Programming Principles II",
+    "instructs_year": 1
+  },
+  {
+    "id": "I002",
+    "name": "Assel Smaiyl",
+    "faculty": "SITE",
+    "course_name": "Basics of Information Systems",
+    "instructs_year": 2
+  },
+  {
+    "id": "I003",
+    "name": "Aasso Ziro",
+    "faculty": "SITE",
+    "course_name": "Introduction to Cybersecurity",
+    "instructs_year": 3
+  },
+  {
+    "id": "I004",
+    "name": "Bauyrzhan Azimkhanov",
+        "faculty": "SITE",
+    "course_name": "Software Engineering",
+    "instructs_year": 4
+  }
+]

@@ -1,0 +1,224 @@
+{
+  "instructors": [
+    {
+      "id": "I001",
+      "name": "Beisenbek Baisakov",
+      "faculty": "SITE",
+      "course_name": "Programming Principles II",
+      "instructs_year": 1
+    },
+    {
+      "id": "I002",
+      "name": "Assel Smaiyl",
+      "faculty": "SITE",
+      "course_name": "Basics of Information Systems",
+      "instructs_year": 2
+    },
+    {
+      "id": "I003",
+      "name": "Aasso Ziro",
+      "faculty": "SITE",
+      "course_name": "Introduction to Cybersecurity",
+      "instructs_year": 3
+    },
+    {
+      "id": "I004",
+      "name": "Bauyrzhan Azimkhanov",
+      "faculty": "SITE",
+      "course_name": "Software Engineering",
+      "instructs_year": 4
+    }
+  ],
+  "students": [
+    {
+      "id": "25B032112",
+      "name": "Sultan Mecheyev",
+      "year": 1,
+      "major": "Information Systems",
+      "gpa": 3.6,
+      "email": "s_mecheev@kbtu.kz",
+      "clubs": [
+        "Coding Club",
+        "Robotics"
+      ]
+    },
+    {
+      "id": "25B032191",
+      "name": "Mansur Zineshov",
+      "year": 1,
+      "major": "Automation and Control",
+      "gpa": 3.2,
+      "email": "m_zineshov@kbtu.kz",
+      "clubs": [
+        "Gaming Dev"
+      ]
+    },
+    {
+      "id": "24B031092",
+      "name": "Azamat Zhantemir",
+      "year": 2,
+      "major": "Information Systems",
+      "gpa": 3.8,
+      "email": "a_zhantemir@kbtu.kz",
+      "clubs": [
+        "AI Club"
+      ]
+    },
+    {
+      "id": "24B031171",
+      "name": "Anuar Berekeyev",
+      "year": 2,
+      "major": "IT Management",
+      "gpa": 3.1,
+      "email": "a_berekeyev@kbtu.kz",
+      "clubs": [
+        "Voleyball club"
+      ]
+    },
+    {
+      "id": "23B031189",
+      "name": "Galiyeva Rozalina",
+      "year": 3,
+      "major": "Cybersecurity",
+      "gpa": 3.4,
+      "email": "r_galiyeva@kbtu.kz",
+      "clubs": [
+        "CTF Team",
+        "Linux Users"
+      ]
+    },
+    {
+      "id": "23B032335",
+      "name": "Nikita Gordeev",
+      "year": 3,
+      "major": "Cybersecurity",
+      "gpa": 3.0,
+      "email": "n_gordeev@kbtu.kz",
+      "clubs": [
+        "CTF Team"
+      ]
+    },
+    {
+      "id": "22B031219",
+      "name": "Erkhanuly Ernur",
+      "year": 4,
+      "major": "Software Engineering",
+      "gpa": 3.7,
+      "email": "e_ernur@kbtu.kz",
+      "clubs": [
+        "Entrepreneurship"
+      ]
+    },
+    {
+      "id": "22B032323",
+      "name": "Ergali Dina",
+      "year": 4,
+      "major": "Software Engineering",
+      "gpa": 3.3,
+      "email": "e_dina@kbtu.kz",
+      "clubs": [
+        "IEEE Student Branch"
+      ]
+    }
+  ],
+  "students_under_instructor": {
+    "Beisenbek Baisakov": [
+      {
+        "id": "25B032112",
+        "name": "Sultan Mecheyev",
+        "year": 1,
+        "major": "Information Systems",
+        "gpa": 3.6,
+        "email": "s_mecheev@kbtu.kz",
+        "clubs": [
+          "Coding Club",
+          "Robotics"
+        ]
+      },
+      {
+        "id": "25B032191",
+        "name": "Mansur Zineshov",
+        "year": 1,
+        "major": "Automation and Control",
+        "gpa": 3.2,
+        "email": "m_zineshov@kbtu.kz",
+        "clubs": [
+          "Gaming Dev"
+        ]
+      }
+    ],
+    "Assel Smaiyl": [
+      {
+        "id": "24B031092",
+        "name": "Azamat Zhantemir",
+        "year": 2,
+        "major": "Information Systems",
+        "gpa": 3.8,
+        "email": "a_zhantemir@kbtu.kz",
+        "clubs": [
+          "AI Club"
+        ]
+      },
+      {
+        "id": "24B031171",
+        "name": "Anuar Berekeyev",
+        "year": 2,
+        "major": "IT Management",
+        "gpa": 3.1,
+        "email": "a_berekeyev@kbtu.kz",
+        "clubs": [
+          "Voleyball club"
+        ]
+      }
+    ],
+    "Aasso Ziro": [
+      {
+        "id": "23B031189",
+        "name": "Galiyeva Rozalina",
+        "year": 3,
+        "major": "Cybersecurity",
+        "gpa": 3.4,
+        "email": "r_galiyeva@kbtu.kz",
+        "clubs": [
+          "CTF Team",
+          "Linux Users"
+        ]
+      },
+      {
+        "id": "23B032335",
+        "name": "Nikita Gordeev",
+        "year": 3,
+        "major": "Cybersecurity",
+        "gpa": 3.0,
+        "email": "n_gordeev@kbtu.kz",
+        "clubs": [
+          "CTF Team"
+        ]
+      }
+    ],
+    "Bauyrzhan Azimkhanov": [
+      {
+        "id": "22B031219",
+        "name": "Erkhanuly Ernur",
+        "year": 4,
+        "major": "Software Engineering",
+        "gpa": 3.7,
+        "email": "e_ernur@kbtu.kz",
+        "clubs": [
+          "Entrepreneurship"
+        ]
+      },
+      {
+        "id": "22B032323",
+        "name": "Ergali Dina",
+        "year": 4,
+        "major": "Software Engineering",
+        "gpa": 3.3,
+        "email": "e_dina@kbtu.kz",
+        "clubs": [
+          "IEEE Student Branch"
+        ]
+      }
+    ]
+  }
+}

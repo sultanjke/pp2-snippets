@@ -15,6 +15,7 @@ This repository is a collection of Python "practice snippets" that cover the **c
 - [Practice 03 — Functions & OOP](#practice-03--functions--oop)
 - [Practice 04 — Iterators & Generators](#practice-04--iterators--generators)
 - [Practice 05 — Regular Expressions](#practice-05--regular-expressions)
+- [Practice 06 — File Handling & Built-in Functions](#practice-06--file-handling--built-in-functions)
 - [Repository Structure](#repository-structure)
 
 ---
@@ -85,6 +86,18 @@ This repository is a collection of Python "practice snippets" that cover the **c
 
 ---
 
+## Practice 06 — File Handling & Built-in Functions
+
+> Working with files, directories, and core built-in functions for data processing.
+
+| # | Topic | Description | Files | Path |
+|---|-------|-------------|:-----:|------|
+| 1 | **File Handling** | File modes (`r`, `w`, `a`, `x`), reading methods (`read()`, `readline()`, `readlines()`), writing & appending, `with` statement, copying & deleting files with `shutil` | 3 | [`Practice 06/file_handling/`](Practice%2006/file_handling/) |
+| 2 | **Directory Management** | Creating directories (`os.mkdir()`, `os.makedirs()`), listing contents (`os.listdir()`), changing directories (`os.chdir()`, `os.getcwd()`), removing directories (`os.rmdir()`), moving files between directories, finding files by extension | 2 | [`Practice 06/directory_management/`](Practice%2006/directory_management/) |
+| 3 | **Built-in Functions** | `map()`, `filter()`, `reduce()`, `enumerate()`, `zip()`, `len()`, `sum()`, `min()`, `max()`, `sorted()`, type checking & conversions (`int()`, `float()`, `str()`, `list()`, `tuple()`, `set()`) | 2 | [`Practice 06/builtin_functions/`](Practice%2006/builtin_functions/) |
+
+---
+
 ## How to Run
 
 ### Option A: Run a single file
@@ -141,6 +154,18 @@ programming-principles-2/
 │   ├── regex/
 │	├── raw.txt # 2.2 Practical Exercise: Receipt
 │	└── receipt_parser.py # 2.2 Practical Exercise: Receipt Parsing (prices, product names, payment method)
+├── Practice 06/             # File Handling & Built-in Functions (7 files)
+│   ├── file_handling/
+│   │   ├── write_files.py
+│   │   ├── read_files.py
+│   │   └── copy_delete_files.py
+│   ├── directory_management/
+│   │   ├── create_list_dirs.py
+│   │   └── move_files.py
+│   ├── builtin_functions/
+│       ├── map_filter_reduce.py
+│       └── enumerate_zip_examples.py
+│
 └── README.md
 ```
 

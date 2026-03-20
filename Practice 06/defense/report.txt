@@ -1,0 +1,10 @@
+Total students: 9
+Average score: 86.67
+Highest score: 95
+Lowest score: 78
+Top students:
+Bob 90
+David 92
+Eve 88
+Grace 95
+Ian 87

@@ -1,172 +1,177 @@
-# Programming Principles 2
+﻿# Programming Principles 2
 
 <p align="left">
-	<img src="assets/KBTU.avif" alt="University Logo" width="220" />
+  <img src="assets/KBTU.avif" alt="University Logo" width="220" />
 </p>
 
-PP2 2026 — Spring Semester, Python Snippets
+PP2 2026 - Spring Semester, Python Snippets
 
-This repository is a collection of Python "practice snippets" that cover the **core Python basics** taught in an **Programming Principles II** course. This course requires us to upload all practice examples/snippet codes that cover the basic topics (aligned with the Python basics learning path on [W3Schools](https://www.w3schools.com/python/)).
+This repository collects Python practice snippets and practical exercises for Programming Principles II, aligned with the Python basics learning path on [W3Schools](https://www.w3schools.com/python/).
 
 ## Table of Contents
 
-- [Practice 01 — Python Fundamentals](#practice-01--python-fundamentals)
-- [Practice 02 — Control Flow & Logic](#practice-02--control-flow--logic)
-- [Practice 03 — Functions & OOP](#practice-03--functions--oop)
-- [Practice 04 — Iterators & Generators](#practice-04--iterators--generators)
-- [Practice 05 — Regular Expressions](#practice-05--regular-expressions)
-- [Practice 06 — File Handling & Built-in Functions](#practice-06--file-handling--built-in-functions)
+- [Practice 01 - Python Fundamentals](#practice-01---python-fundamentals)
+- [Practice 02 - Control Flow and Logic](#practice-02---control-flow-and-logic)
+- [Practice 03 - Functions and OOP](#practice-03---functions-and-oop)
+- [Practice 04 - Iterators and Generators](#practice-04---iterators-and-generators)
+- [Practice 05 - Regular Expressions](#practice-05---regular-expressions)
+- [Practice 06 - File Handling and Built-in Functions](#practice-06---file-handling-and-built-in-functions)
+- [Practice 07 - PhoneBook (PostgreSQL + Python)](#practice-07---phonebook-postgresql--python)
+- [Practice 08 - PhoneBook with Functions and Procedures](#practice-08---phonebook-with-functions-and-procedures)
+- [How to Run](#how-to-run)
 - [Repository Structure](#repository-structure)
 
 ---
 
-## Practice 01 — Python Fundamentals
+## Practice 01 - Python Fundamentals
 
-> First steps with Python: syntax rules, data types, variables, strings, numbers, casting, and comments.
+> First steps with Python: syntax, data types, variables, strings, numbers, casting, and comments.
 
 | # | Topic | Description | Files | Path |
 |---|-------|-------------|:-----:|------|
-| 1 | **Syntax** | Indentation rules, comments inside code, variable declarations | 4 | [`Practice 01/syntax/`](Practice%2001/syntax/) |
-| 2 | **Variables** | Variable assignment, multiple assignment, `type()`, `global` keyword, casting | 5 | [`Practice 01/variables/`](Practice%2001/variables/) |
-| 3 | **Data Types** | Overview of Python's built-in data types (str, int, float, list, dict, set, etc.) | 1 | [`Practice 01/data-types/`](Practice%2001/data-types/) |
-| 4 | **Numbers** | int, float, complex types, type conversion, random number generation | 5 | [`Practice 01/numbers/`](Practice%2001/numbers/) |
-| 5 | **Casting** | Explicit type casting with `int()`, `float()`, `str()` | 3 | [`Practice 01/casting/`](Practice%2001/casting/) |
-| 6 | **Strings** | String slicing, splitting, substring checks, escape characters | 4 | [`Practice 01/strings/`](Practice%2001/strings/) |
-| 7 | **Comments** | Single-line and multi-line comments, docstring-style comments | 4 | [`Practice 01/comments/`](Practice%2001/comments/) |
+| 1 | **Syntax** | Indentation rules, comments, variable declarations | 4 | [`Practice 01/syntax/`](Practice%2001/syntax/) |
+| 2 | **Variables** | Assignment, multiple assignment, `type()`, `global`, casting | 5 | [`Practice 01/variables/`](Practice%2001/variables/) |
+| 3 | **Data Types** | Overview of Python built-in data types | 1 | [`Practice 01/data-types/`](Practice%2001/data-types/) |
+| 4 | **Numbers** | `int`, `float`, `complex`, conversion, random numbers | 5 | [`Practice 01/numbers/`](Practice%2001/numbers/) |
+| 5 | **Casting** | Explicit conversions with `int()`, `float()`, `str()` | 3 | [`Practice 01/casting/`](Practice%2001/casting/) |
+| 6 | **Strings** | Slicing, split, substring checks, escape chars | 4 | [`Practice 01/strings/`](Practice%2001/strings/) |
+| 7 | **Comments** | Single-line and multi-line comments | 4 | [`Practice 01/comments/`](Practice%2001/comments/) |
 
 ---
 
-## Practice 02 — Control Flow & Logic
+## Practice 02 - Control Flow and Logic
 
 > Booleans, operators, conditional statements, and loops.
 
 | # | Topic | Description | Files | Path |
 |---|-------|-------------|:-----:|------|
-| 1 | **Booleans** | Boolean evaluation, truthy/falsy values, `bool()`, `isinstance()`, class `__len__` evaluation | 5 | [`Practice 02/boolean/`](Practice%2002/boolean/) |
-| 2 | **Operators** | Comparison, logical, identity, membership, division operators, walrus operator (`:=`) | 6 | [`Practice 02/operators/`](Practice%2002/operators/) |
-| 3 | **If-Else** | if/elif/else, match-case (switch), shorthand conditionals, pass statement, grading & temperature classifiers | 7 | [`Practice 02/if-else/`](Practice%2002/if-else/) |
-| 4 | **For Loops** | Iterating over sequences, `range()`, nested loops, `break` and `continue` | 5 | [`Practice 02/for-loops/`](Practice%2002/for-loops/) |
-| 5 | **While Loops** | While loop basics, `break`, `continue`, while-else pattern | 4 | [`Practice 02/while-loops/`](Practice%2002/while-loops/) |
+| 1 | **Booleans** | Truthy/falsy, `bool()`, `isinstance()`, class evaluation | 5 | [`Practice 02/boolean/`](Practice%2002/boolean/) |
+| 2 | **Operators** | Comparison, logical, identity, membership, walrus operator | 6 | [`Practice 02/operators/`](Practice%2002/operators/) |
+| 3 | **If-Else** | `if/elif/else`, `match`, shorthand conditions, examples | 7 | [`Practice 02/if-else/`](Practice%2002/if-else/) |
+| 4 | **For Loops** | Iteration, `range()`, nested loops, `break`/`continue` | 5 | [`Practice 02/for-loops/`](Practice%2002/for-loops/) |
+| 5 | **While Loops** | `while`, `break`, `continue`, `while-else` | 4 | [`Practice 02/while-loops/`](Practice%2002/while-loops/) |
 
 ---
 
-## Practice 03 — Functions & OOP
+## Practice 03 - Functions and OOP
 
-> Functions, lambda expressions, classes & objects, and inheritance. Each file includes commented practical applications.
+> Functions, lambda expressions, classes, objects, and inheritance.
 
 | # | Topic | Description | Files | Path |
 |---|-------|-------------|:-----:|------|
-| 1 | **Functions** | Function definition & docstrings, positional/default/`*args`/`**kwargs` arguments, return values, passing lists and data types | 4 | [`Practice 03/functions/`](Practice%2003/functions/) |
-| 2 | **Lambda** | Lambda syntax & basics, lambda with `map()`, `filter()` & `sorted()`, lambda vs regular functions | 4 | [`Practice 03/lambda/`](Practice%2003/lambda/) |
-| 3 | **Classes** | Class definition & `__init__`, instance methods & `self`, class vs instance variables, modifying & deleting properties | 4 | [`Practice 03/classes/`](Practice%2003/classes/) |
-| 4 | **Inheritance** | Parent/child relationships, `super()` & method overriding, multiple inheritance & MRO, abstract base classes | 4 | [`Practice 03/inheritance/`](Practice%2003/inheritance/) |
+| 1 | **Functions** | Definition, arguments, return values, passing data types | 4 | [`Practice 03/functions/`](Practice%2003/functions/) |
+| 2 | **Lambda** | Lambda basics, `map()`, `filter()`, `sorted()` | 4 | [`Practice 03/lambda/`](Practice%2003/lambda/) |
+| 3 | **Classes** | Class basics, `__init__`, methods, class vs instance vars | 4 | [`Practice 03/classes/`](Practice%2003/classes/) |
+| 4 | **Inheritance** | Parent/child, overriding, multiple inheritance, abstracts | 4 | [`Practice 03/inheritance/`](Practice%2003/inheritance/) |
 
 ---
 
-## Practice 04 — Iterators & Generators
+## Practice 04 - Iterators and Generators
 
-> Lazy evaluation, custom iterators, generator functions, generator expressions, dates, timezones, math, and JSON.
+> Iteration patterns plus dates, math, and JSON exercises.
 
 | # | Topic | Description | Files | Path |
 |---|-------|-------------|:-----:|------|
-| 1 | **Iterators & Generators** | `iter()` & `next()`, looping through iterators, custom iterator classes (`__iter__`/`__next__`), `yield` keyword, generator functions & pipelines, generator expressions, memory efficiency | 4 | [`Practice 04/iterators-and-generators/`](Practice%2004/iterators-and-generators/) |
-| 2 | **Dates & Times** | `datetime` module, creating date/time objects, `strftime()` & `strptime()` formatting, `timedelta` for time differences, timezone conversions | 4 | [`Practice 04/dates-and-times/`](Practice%2004/dates-and-times/) |
-| 3 | **Math** | Built-in math functions (`min`, `max`, `abs`, `round`, `pow`), `math` module (`sqrt`, `ceil`, `floor`, trig, `pi`, `e`), `random` module (`randint`, `choice`, `shuffle`, `sample`) | 3 | [`Practice 04/math/`](Practice%2004/math/) |
-| 4 | **JSON** | JSON syntax, `json.loads()` parsing, `json.dumps()` converting, reading & writing JSON files, working with JSON data from `sample-data.json` | 4 | [`Practice 04/json/`](Practice%2004/json/) |
+| 1 | **Iterators and Generators** | `iter()`, `next()`, custom iterators, `yield`, generator expressions | 4 | [`Practice 04/iterators-and-generators/`](Practice%2004/iterators-and-generators/) |
+| 2 | **Dates and Times** | `datetime`, formatting, time differences, timezones | 4 | [`Practice 04/dates-and-times/`](Practice%2004/dates-and-times/) |
+| 3 | **Math** | Built-in math, `math` module, `random` module | 3 | [`Practice 04/math/`](Practice%2004/math/) |
+| 4 | **JSON** | Parse, serialize, read/write JSON files | 4 | [`Practice 04/json/`](Practice%2004/json/) |
 
 ---
 
-## Practice 05 — Regular Expressions
+## Practice 05 - Regular Expressions
 
-> Pattern matching, text searching, and string manipulation with Python's `re` module.
+> Pattern matching and text processing with Python `re`.
 
 | # | Topic | Description | Files | Path |
 |---|-------|-------------|:-----:|------|
-| 1 | **RegEx** | Metacharacters, special sequences, sets, quantifiers, `re.search()`, `re.match()`, `re.findall()`, `re.split()`, `re.sub()`, flags (`IGNORECASE`, `MULTILINE`, `DOTALL`, `VERBOSE`), practical validators | 4 | [`Practice 05/regex/`](Practice%2005/regex/) |
+| 1 | **RegEx** | `search`, `match`, `findall`, `split`, `sub`, flags, validators | 4 | [`Practice 05/regex/`](Practice%2005/regex/) |
 
 ---
 
-## Practice 06 — File Handling & Built-in Functions
+## Practice 06 - File Handling and Built-in Functions
 
-> Working with files, directories, and core built-in functions for data processing.
+> Working with files, directories, and data-processing helpers.
 
 | # | Topic | Description | Files | Path |
 |---|-------|-------------|:-----:|------|
-| 1 | **File Handling** | File modes (`r`, `w`, `a`, `x`), reading methods (`read()`, `readline()`, `readlines()`), writing & appending, `with` statement, copying & deleting files with `shutil` | 3 | [`Practice 06/file_handling/`](Practice%2006/file_handling/) |
-| 2 | **Directory Management** | Creating directories (`os.mkdir()`, `os.makedirs()`), listing contents (`os.listdir()`), changing directories (`os.chdir()`, `os.getcwd()`), removing directories (`os.rmdir()`), moving files between directories, finding files by extension | 2 | [`Practice 06/directory_management/`](Practice%2006/directory_management/) |
-| 3 | **Built-in Functions** | `map()`, `filter()`, `reduce()`, `enumerate()`, `zip()`, `len()`, `sum()`, `min()`, `max()`, `sorted()`, type checking & conversions (`int()`, `float()`, `str()`, `list()`, `tuple()`, `set()`) | 2 | [`Practice 06/builtin_functions/`](Practice%2006/builtin_functions/) |
+| 1 | **File Handling** | File modes, reading/writing, append, copy/delete with `shutil` | 3 | [`Practice 06/file_handling/`](Practice%2006/file_handling/) |
+| 2 | **Directory Management** | Create/list/change/remove directories, move files | 2 | [`Practice 06/directory_management/`](Practice%2006/directory_management/) |
+| 3 | **Built-in Functions** | `map`, `filter`, `reduce`, `enumerate`, `zip`, sorting and conversions | 2 | [`Practice 06/builtin_functions/`](Practice%2006/builtin_functions/) |
+
+---
+
+## Practice 07 - PhoneBook (PostgreSQL + Python)
+
+> Practical exercise with PostgreSQL integration in Python.
+
+| # | Topic | Description | Path |
+|---|-------|-------------|------|
+| 1 | **PhoneBook CRUD** | Table design, CSV import, console insert, update, filter queries, delete by name/phone | [`Practice 07/`](Practice%2007/) |
+
+---
+
+## Practice 08 - PhoneBook with Functions and Procedures
+
+> Continuation of Practice 07 using PostgreSQL functions and stored procedures.
+
+| # | Topic | Description | Path |
+|---|-------|-------------|------|
+| 1 | **SQL Functions and Procedures** | Pattern search function, upsert procedure, bulk insert procedure with validation, pagination function, delete procedure | [`Practice 08/`](Practice%2008/) |
 
 ---
 
 ## How to Run
 
-### Option A: Run a single file
-
-From the repository root:
+Run a single file:
 
 ```bash
 python "Practice 01/strings/split.py"
 ```
 
-### Option B: Run inside VS Code
+Run Practice 07 PhoneBook:
 
-1. Open a `.py` file.
-2. Use **Run Python File** (top-right play button) or the VS Code Run menu.
+```bash
+python "Practice 07/phonebook.py" init
+python "Practice 07/phonebook.py"
+```
+
+Run Practice 08 PhoneBook:
+
+```bash
+python "Practice 08/phonebook.py" init
+python "Practice 08/phonebook.py"
+```
 
 ---
 
 ## Repository Structure
 
-```
-programming-principles-2/
-├── assets/
-│   └── KBTU.avif
-├── Practice 01/             # Python Fundamentals (28 files)
-│   ├── syntax/
-│   ├── variables/
-│   ├── data-types/
-│   ├── numbers/
-│   ├── casting/
-│   ├── strings/
-│   └── comments/
-├── Practice 02/             # Control Flow & Logic (27 files)
-│   ├── boolean/
-│   ├── operators/
-│   ├── if-else/
-│   ├── for-loops/
-│   └── while-loops/
-├── Practice 03/             # Functions & OOP (16 files)
-│   ├── functions/
-│   ├── lambda/
-│   ├── classes/
-│   └── inheritance/
-├── Practice 04/             # Iterators, Generators, Dates, Math & JSON (15 files)
-│   ├── iterators-and-generators/
-│   ├── dates-and-times/
-│   ├── math/
-│   ├── json/
-│	└── exercises/
-│		├── json/
-│		├── date.py
-│		├── generators.py
-│		└── math.py
-├── Practice 05/             # Regular Expressions (4 files)
-│   ├── regex/
-│	├── raw.txt # 2.2 Practical Exercise: Receipt
-│	└── receipt_parser.py # 2.2 Practical Exercise: Receipt Parsing (prices, product names, payment method)
-├── Practice 06/             # File Handling & Built-in Functions (7 files)
-│   ├── file_handling/
-│   │   ├── write_files.py
-│   │   ├── read_files.py
-│   │   └── copy_delete_files.py
-│   ├── directory_management/
-│   │   ├── create_list_dirs.py
-│   │   └── move_files.py
-│   ├── builtin_functions/
-│       ├── map_filter_reduce.py
-│       └── enumerate_zip_examples.py
-│
-└── README.md
+```text
+pp2-snippets/
+|-- assets/
+|   `-- KBTU.avif
+|-- Practice 01/
+|-- Practice 02/
+|-- Practice 03/
+|-- Practice 04/
+|-- Practice 05/
+|-- Practice 06/
+|-- Practice 07/
+|   |-- README.md
+|   |-- phonebook.py
+|   |-- connect.py
+|   |-- config.py
+|   |-- contacts.csv
+|   `-- requirements.txt
+|-- Practice 08/
+|   |-- README.md
+|   |-- phonebook.py
+|   |-- connect.py
+|   |-- config.py
+|   |-- functions.sql
+|   `-- procedures.sql
+`-- README.md
 ```
 
 ## Usage

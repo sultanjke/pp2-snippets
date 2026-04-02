@@ -152,11 +152,53 @@ pp2-snippets/
 |-- assets/
 |   `-- KBTU.avif
 |-- Practice 01/
+|   |-- syntax/
+|   |-- variables/
+|   |-- data-types/
+|   |-- numbers/
+|   |-- casting/
+|   |-- strings/
+|   |-- comments/
+|   |-- getting-started/
+|   |-- home/
+|   `-- README.md
 |-- Practice 02/
+|   |-- boolean/
+|   |-- operators/
+|   |-- if-else/
+|   |-- for-loops/
+|   |-- while-loops/
+|   `-- README.md
 |-- Practice 03/
+|   |-- functions/
+|   |-- lambda/
+|   |-- classes/
+|   |-- inheritance/
+|   |-- defense.py
+|   `-- README.md
 |-- Practice 04/
+|   |-- iterators-and-generators/
+|   |-- dates-and-times/
+|   |-- math/
+|   |-- json/
+|   |-- exercises/
+|   |   |-- date.py
+|   |   |-- generators.py
+|   |   |-- math.py
+|   |   `-- json/
+|   |-- defense/
+|   `-- README.md
 |-- Practice 05/
+|   |-- regex/
+|   |-- raw.txt
+|   |-- receipt_parser.py
+|   `-- README.md
 |-- Practice 06/
+|   |-- file_handling/
+|   |-- directory_management/
+|   |-- builtin_functions/
+|   |-- defense/
+|   `-- README.md
 |-- Practice 07/
 |   |-- README.md
 |   |-- phonebook.py

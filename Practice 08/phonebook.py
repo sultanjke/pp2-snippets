@@ -234,7 +234,7 @@ def main() -> None:
             print(f"Deleted rows: {deleted_count}")
         else:
             interactive_menu()
-    except Exception as exc:  # noqa: BLE001 - clear console message for students
+    except Exception as exc: 
         print(f"Error: {exc}")
 
 

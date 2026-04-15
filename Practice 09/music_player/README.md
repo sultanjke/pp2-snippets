@@ -1,5 +1,7 @@
 # Music Player with Keyboard Controller
 
+https://github.com/user-attachments/assets/7b1512a4-72f4-47af-aad3-408c66e2a51e
+
 ## Objective
 
 Build a simple music player with keyboard controls and playlist support.

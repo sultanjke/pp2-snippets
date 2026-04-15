@@ -1,5 +1,7 @@
 # Moving Ball Game
 
+<img width="300" height="450" alt="movingball" src="https://github.com/user-attachments/assets/f28e0a8d-e117-4949-b452-51caca5ace6c" />
+
 ## Objective
 
 Create a red ball that moves with arrow keys and stays inside the screen.

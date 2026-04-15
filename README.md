@@ -18,6 +18,7 @@ This repository collects Python practice snippets and practical exercises for Pr
 - [Practice 06 - File Handling and Built-in Functions](#practice-06---file-handling-and-built-in-functions)
 - [Practice 07 - PhoneBook (PostgreSQL + Python)](#practice-07---phonebook-postgresql--python)
 - [Practice 08 - PhoneBook with Functions and Procedures](#practice-08---phonebook-with-functions-and-procedures)
+- [Practice 09 - Pygame Mini Games](#practice-09---pygame-mini-games)
 - [How to Run](#how-to-run)
 - [Repository Structure](#repository-structure)
 
@@ -121,6 +122,18 @@ This repository collects Python practice snippets and practical exercises for Pr
 
 ---
 
+## Practice 09 - Pygame Mini Games
+
+> Three beginner-level Pygame applications: clock, music player, and moving ball game.
+
+| # | Topic | Description | Path |
+|---|-------|-------------|------|
+| 1 | **Mickey's Clock** | MM:SS clock synchronized with system time using rotating Mickey hand graphics | [`Practice 09/mickeys_clock/`](Practice%2009/mickeys_clock/) |
+| 2 | **Music Player** | Keyboard controlled player with playlist, track info, and playback progress | [`Practice 09/music_player/`](Practice%2009/music_player/) |
+| 3 | **Moving Ball** | Red ball movement with arrow keys, step-based movement, and screen boundary checks | [`Practice 09/moving_ball/`](Practice%2009/moving_ball/) |
+
+---
+
 ## How to Run
 
 Run a single file:
@@ -142,6 +155,17 @@ Run Practice 08 PhoneBook:
 python "Practice 08/phonebook.py" init
 python "Practice 08/phonebook.py"
 ```
+
+Install dependencies and run Practice 09:
+
+```bash
+python -m pip install -r "Practice 09/requirements.txt"
+python "Practice 09/mickeys_clock/main.py"
+python "Practice 09/music_player/main.py"
+python "Practice 09/moving_ball/main.py"
+```
+
+For the music player, install VLC Media Player desktop app too (required by `python-vlc`). [Download](https://mirror.hyd.albony.in/videolan-ftp/vlc/3.0.23/win64/vlc-3.0.23-win64.exe)
 
 ---
 
@@ -213,6 +237,25 @@ pp2-snippets/
 |   |-- config.py
 |   |-- functions.sql
 |   `-- procedures.sql
+|-- Practice 09/
+|   |-- mickeys_clock/
+|   |   |-- main.py
+|   |   |-- clock.py
+|   |   |-- images/
+|   |   |   `-- mickey_hand.png
+|   |   `-- README.md
+|   |-- music_player/
+|   |   |-- main.py
+|   |   |-- player.py
+|   |   |-- music/
+|   |   |   |-- track1.wav
+|   |   |   `-- track2.wav
+|   |   `-- README.md
+|   |-- moving_ball/
+|   |   |-- main.py
+|   |   |-- ball.py
+|   |   `-- README.md
+|   `-- requirements.txt
 `-- README.md
 ```
 

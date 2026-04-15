@@ -132,6 +132,8 @@ This repository collects Python practice snippets and practical exercises for Pr
 | 2 | **Music Player** | Keyboard controlled player with playlist, track info, and playback progress | [`Practice 09/music_player/`](Practice%2009/music_player/) |
 | 3 | **Moving Ball** | Red ball movement with arrow keys, step-based movement, and screen boundary checks | [`Practice 09/moving_ball/`](Practice%2009/moving_ball/) |
 
+> **_NOTE:_** For the music player, install VLC Media Player desktop app too (required by `python-vlc`). [Download](https://mirror.hyd.albony.in/videolan-ftp/vlc/3.0.23/win64/vlc-3.0.23-win64.exe)
+
 ---
 
 ## How to Run
@@ -141,31 +143,6 @@ Run a single file:
 ```bash
 python "Practice 01/strings/split.py"
 ```
-
-Run Practice 07 PhoneBook:
-
-```bash
-python "Practice 07/phonebook.py" init
-python "Practice 07/phonebook.py"
-```
-
-Run Practice 08 PhoneBook:
-
-```bash
-python "Practice 08/phonebook.py" init
-python "Practice 08/phonebook.py"
-```
-
-Install dependencies and run Practice 09:
-
-```bash
-python -m pip install -r "Practice 09/requirements.txt"
-python "Practice 09/mickeys_clock/main.py"
-python "Practice 09/music_player/main.py"
-python "Practice 09/moving_ball/main.py"
-```
-
-For the music player, install VLC Media Player desktop app too (required by `python-vlc`). [Download](https://mirror.hyd.albony.in/videolan-ftp/vlc/3.0.23/win64/vlc-3.0.23-win64.exe)
 
 ---
 

@@ -1,5 +1,7 @@
 # Mickey's Clock Application
 
+<img width="300" height="450" alt="mickeysclock" src="https://github.com/user-attachments/assets/884f3df5-77d6-45bb-940c-21d23a6aa7f3" />
+
 ## Objective
 
 Create a Mickey-themed clock that uses Mickey hand graphics as clock hands.

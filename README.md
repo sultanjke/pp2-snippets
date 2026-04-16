@@ -19,6 +19,7 @@ This repository collects Python practice snippets and practical exercises for Pr
 - [Practice 07 - PhoneBook (PostgreSQL + Python)](#practice-07---phonebook-postgresql--python)
 - [Practice 08 - PhoneBook with Functions and Procedures](#practice-08---phonebook-with-functions-and-procedures)
 - [Practice 09 - Pygame Mini Games](#practice-09---pygame-mini-games)
+- [TSIS 01 - Extended PhoneBook](#tsis-01---extended-phonebook)
 - [How to Run](#how-to-run)
 - [Repository Structure](#repository-structure)
 
@@ -136,12 +137,32 @@ This repository collects Python practice snippets and practical exercises for Pr
 
 ---
 
+## TSIS 01 - Extended PhoneBook
+
+> Advanced continuation of PhoneBook from Practices 07 and 08: richer relational schema, DB procedures/functions, and JSON/CSV data exchange.
+
+| # | Topic | Description | Path |
+|---|-------|-------------|------|
+| 1 | **Extended Contact Model** | Multiple phones per contact, groups table, email and birthday fields, safe migration from old schema | [`TSIS 01/`](TSIS 01/) |
+| 2 | **Advanced Console Features** | Group filtering, email search, sorting, and pagination loop (`next/prev/quit`) | [`TSIS 01/phonebook.py`](TSIS 01/phonebook.py) |
+| 3 | **DB-side Logic** | New SQL objects: `search_contacts`, `add_phone`, `move_to_group` | [`TSIS 01/functions.sql`](TSIS 01/functions.sql), [`TSIS 01/procedures.sql`](TSIS 01/procedures.sql) |
+| 4 | **Import/Export** | JSON export/import with duplicate handling, extended CSV import with extra fields | [`TSIS 01/README.md`](TSIS 01/README.md) |
+
+---
+
 ## How to Run
 
 Run a single file:
 
 ```bash
 python "Practice 01/strings/split.py"
+```
+
+TSIS 01 initialization and menu:
+
+```bash
+python "TSIS 01/phonebook.py" init
+python "TSIS 01/phonebook.py"
 ```
 
 ---
@@ -233,6 +254,13 @@ pp2-snippets/
 |   |   |-- ball.py
 |   |   `-- README.md
 |   `-- requirements.txt
+|-- TSIS 01/
+|   |-- README.md
+|   |-- phonebook.py
+|   |-- connect.py
+|   |-- config.py
+|   |-- functions.sql
+|   `-- procedures.sql
 `-- README.md
 ```
 

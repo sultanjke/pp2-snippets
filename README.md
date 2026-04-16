@@ -143,10 +143,10 @@ This repository collects Python practice snippets and practical exercises for Pr
 
 | # | Topic | Description | Path |
 |---|-------|-------------|------|
-| 1 | **Extended Contact Model** | Multiple phones per contact, groups table, email and birthday fields, safe migration from old schema | [`TSIS 01/`](TSIS 01/) |
-| 2 | **Advanced Console Features** | Group filtering, email search, sorting, and pagination loop (`next/prev/quit`) | [`TSIS 01/phonebook.py`](TSIS 01/phonebook.py) |
-| 3 | **DB-side Logic** | New SQL objects: `search_contacts`, `add_phone`, `move_to_group` | [`TSIS 01/functions.sql`](TSIS 01/functions.sql), [`TSIS 01/procedures.sql`](TSIS 01/procedures.sql) |
-| 4 | **Import/Export** | JSON export/import with duplicate handling, extended CSV import with extra fields | [`TSIS 01/README.md`](TSIS 01/README.md) |
+| 1 | **Extended Contact Model** | Multiple phones per contact, groups table, email and birthday fields, safe migration from old schema | [`TSIS 01/`](TSIS-01/) |
+| 2 | **Advanced Console Features** | Group filtering, email search, sorting, and pagination loop (`next/prev/quit`) | [`TSIS 01/phonebook.py`](TSIS-01/phonebook.py) |
+| 3 | **DB-side Logic** | New SQL objects: `search_contacts`, `add_phone`, `move_to_group` | [`TSIS 01/functions.sql`](TSIS 01/functions.sql), [`TSIS 01/procedures.sql`](TSIS-01/procedures.sql) |
+| 4 | **Import/Export** | JSON export/import with duplicate handling, extended CSV import with extra fields | [`TSIS 01/README.md`](TSIS-01/README.md) |
 
 ---
 

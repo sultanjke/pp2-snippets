@@ -157,7 +157,7 @@ Duplicate contact rule in JSON import:
 - duplicate means same normalized `first_name + surname`.
 - for each duplicate, app asks: `skip` or `overwrite`.
 
-## CSV format (extended)
+## CSV format
 
 Recommended CSV headers:
 

@@ -19,6 +19,8 @@ This repository collects Python practice snippets and practical exercises for Pr
 - [Practice 07 - PhoneBook (PostgreSQL + Python)](#practice-07---phonebook-postgresql--python)
 - [Practice 08 - PhoneBook with Functions and Procedures](#practice-08---phonebook-with-functions-and-procedures)
 - [Practice 09 - Pygame Mini Games](#practice-09---pygame-mini-games)
+- [Practice 10 - Pygame Games](#practice-10---pygame-games)
+- [Practice 11 - Advanced Pygame Games](#practice-11---advanced-pygame-games)
 - [TSIS 01 - Extended PhoneBook](#tsis-01---extended-phonebook)
 - [How to Run](#how-to-run)
 - [Repository Structure](#repository-structure)
@@ -137,6 +139,30 @@ This repository collects Python practice snippets and practical exercises for Pr
 
 ---
 
+## Practice 10 - Pygame Games
+
+> Three beginner-friendly Pygame projects: Racer, Snake, and Paint.
+
+| # | Topic | Description | Path |
+|---|-------|-------------|------|
+| 1 | **Racer** | Lane-based racing game with enemy collision, timed speed increase, random coins, and coin counter HUD | [`Practice 10/racer/`](Practice%2010/racer/) |
+| 2 | **Snake** | Grid snake with wall collision, safe food spawning, score/level counters, and level-based speed scaling | [`Practice 10/snake/`](Practice%2010/snake/) |
+| 3 | **Paint** | Mouse toolbar paint app with pen, rectangle, circle, eraser, and color palette | [`Practice 10/paint/`](Practice%2010/paint/) |
+
+---
+
+## Practice 11 - Advanced Pygame Games
+
+> Extended version of Practice 10 with weighted items, timers, and extra drawing shapes.
+
+| # | Topic | Description | Path |
+|---|-------|-------------|------|
+| 1 | **Racer** | Weighted random coins, coin-based enemy speed increase, and commented code | [`Practice 11/racer/`](Practice%2011/racer/) |
+| 2 | **Snake** | Weighted foods with disappearing timer and commented code | [`Practice 11/snake/`](Practice%2011/snake/) |
+| 3 | **Paint** | New tools: square, right triangle, equilateral triangle, rhombus, and commented code | [`Practice 11/paint/`](Practice%2011/paint/) |
+
+---
+
 ## TSIS 01 - Extended PhoneBook
 
 > Advanced continuation of PhoneBook from Practices 07 and 08: richer relational schema, DB procedures/functions, and JSON/CSV data exchange.
@@ -145,7 +171,7 @@ This repository collects Python practice snippets and practical exercises for Pr
 |---|-------|-------------|------|
 | 1 | **Extended Contact Model** | Multiple phones per contact, groups table, email and birthday fields, safe migration from old schema | [`TSIS 01/`](TSIS%2001/) |
 | 2 | **Advanced Console Features** | Group filtering, email search, sorting, and pagination loop (`next/prev/quit`) | [`TSIS 01/phonebook.py`](TSIS%2001/phonebook.py) |
-| 3 | **DB-side Logic** | New SQL objects: `search_contacts`, `add_phone`, `move_to_group` | [`TSIS 01/functions.sql`](TSIS%2001/functions.sql), [`TSIS 01/procedures.sql`](TSIS-01/procedures.sql) |
+| 3 | **DB-side Logic** | New SQL objects: `search_contacts`, `add_phone`, `move_to_group` | [`TSIS 01/functions.sql`](TSIS%2001/functions.sql), [`TSIS 01/procedures.sql`](TSIS%2001/procedures.sql) |
 | 4 | **Import/Export** | JSON export/import with duplicate handling, extended CSV import with extra fields | [`TSIS 01/README.md`](TSIS%2001/README.md) |
 
 ---
@@ -163,6 +189,22 @@ TSIS 01 initialization and menu:
 ```bash
 python "TSIS 01/phonebook.py" init
 python "TSIS 01/phonebook.py"
+```
+
+Practice 10 games:
+
+```bash
+python "Practice 10/racer/main.py"
+python "Practice 10/snake/main.py"
+python "Practice 10/paint/main.py"
+```
+
+Practice 11 games:
+
+```bash
+python "Practice 11/racer/main.py"
+python "Practice 11/snake/main.py"
+python "Practice 11/paint/main.py"
 ```
 
 ---
@@ -252,6 +294,44 @@ pp2-snippets/
 |   |-- moving_ball/
 |   |   |-- main.py
 |   |   |-- ball.py
+|   |   `-- README.md
+|   `-- requirements.txt
+|-- Practice 10/
+|   |-- racer/
+|   |   |-- main.py
+|   |   |-- racer.py
+|   |   |-- assets/
+|   |   |   |-- road.png
+|   |   |   |-- player_car.png
+|   |   |   |-- enemy_car.png
+|   |   |   `-- coin.png
+|   |   `-- README.md
+|   |-- snake/
+|   |   |-- main.py
+|   |   |-- snake.py
+|   |   `-- README.md
+|   |-- paint/
+|   |   |-- main.py
+|   |   |-- paint_app.py
+|   |   `-- README.md
+|   `-- requirements.txt
+|-- Practice 11/
+|   |-- racer/
+|   |   |-- main.py
+|   |   |-- racer.py
+|   |   |-- assets/
+|   |   |   |-- road.png
+|   |   |   |-- player_car.png
+|   |   |   |-- enemy_car.png
+|   |   |   `-- coin.png
+|   |   `-- README.md
+|   |-- snake/
+|   |   |-- main.py
+|   |   |-- snake.py
+|   |   `-- README.md
+|   |-- paint/
+|   |   |-- main.py
+|   |   |-- paint_app.py
 |   |   `-- README.md
 |   `-- requirements.txt
 |-- TSIS 01/

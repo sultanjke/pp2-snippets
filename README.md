@@ -184,29 +184,6 @@ Run a single file:
 python "Practice 01/strings/split.py"
 ```
 
-TSIS 01 initialization and menu:
-
-```bash
-python "TSIS 01/phonebook.py" init
-python "TSIS 01/phonebook.py"
-```
-
-Practice 10 games:
-
-```bash
-python "Practice 10/racer/main.py"
-python "Practice 10/snake/main.py"
-python "Practice 10/paint/main.py"
-```
-
-Practice 11 games:
-
-```bash
-python "Practice 11/racer/main.py"
-python "Practice 11/snake/main.py"
-python "Practice 11/paint/main.py"
-```
-
 ---
 
 ## Repository Structure

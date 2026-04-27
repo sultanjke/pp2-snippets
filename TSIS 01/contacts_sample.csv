@@ -1,0 +1,17 @@
+first_name,surname,phone,phone_type,email,birthday,group
+Alice,Smith,+77015550001,mobile,alice.smith@gmail.com,1995-05-20,Friend
+Alice,Smith,+77015550002,work,alice.smith@gmail.com,1995-05-20,Friend
+Bob,Johnson,+77025550101,mobile,bob.johnson@work.com,1988-11-03,Work
+Bob,Johnson,+77025550102,home,bob.johnson@work.com,1988-11-03,Work
+Carol,Williams,+77035550201,home,carol.w@mail.kz,1992-07-14,Family
+David,Brown,+77045550301,work,d.brown@corp.com,1980-02-29,Work
+David,Brown,+77045550302,mobile,d.brown@corp.com,1980-02-29,Work
+David,Brown,+77045550303,home,d.brown@corp.com,1980-02-29,Work
+Eva,Garcia,+77055550401,mobile,,2000-09-09,Friend
+Frank,Miller,+77065550501,mobile,frank.miller@example.com,,Other
+Grace,Wilson,+77075550601,home,grace@family.net,1975-12-25,Family
+Grace,Wilson,+77075550602,mobile,grace@family.net,1975-12-25,Family
+Henry,Moore,+77085550701,work,henry.moore@work.com,1990-04-01,Work
+Irene,Taylor,+77095550801,mobile,irene.t@gmail.com,1997-08-17,Friend
+Irene,Taylor,+77095550802,home,irene.t@gmail.com,1997-08-17,Friend
+Jack,Anderson,+77105550901,mobile,,1983-03-30,Other

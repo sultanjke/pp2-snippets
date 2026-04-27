@@ -1,0 +1,108 @@
+[
+  {
+    "first_name": "Alice",
+    "surname": "Smith",
+    "email": "alice.smith@gmail.com",
+    "birthday": "1995-05-20",
+    "group": "Friend",
+    "phones": [
+      {"phone": "+77015550001", "type": "mobile"},
+      {"phone": "+77015550002", "type": "work"}
+    ]
+  },
+  {
+    "first_name": "Bob",
+    "surname": "Johnson",
+    "email": "bob.johnson@work.com",
+    "birthday": "1988-11-03",
+    "group": "Work",
+    "phones": [
+      {"phone": "+77025550101", "type": "mobile"},
+      {"phone": "+77025550102", "type": "home"}
+    ]
+  },
+  {
+    "first_name": "Carol",
+    "surname": "Williams",
+    "email": "carol.w@mail.kz",
+    "birthday": "1992-07-14",
+    "group": "Family",
+    "phones": [
+      {"phone": "+77035550201", "type": "home"}
+    ]
+  },
+  {
+    "first_name": "David",
+    "surname": "Brown",
+    "email": "d.brown@corp.com",
+    "birthday": "1980-02-29",
+    "group": "Work",
+    "phones": [
+      {"phone": "+77045550301", "type": "work"},
+      {"phone": "+77045550302", "type": "mobile"},
+      {"phone": "+77045550303", "type": "home"}
+    ]
+  },
+  {
+    "first_name": "Eva",
+    "surname": "Garcia",
+    "email": "",
+    "birthday": "2000-09-09",
+    "group": "Friend",
+    "phones": [
+      {"phone": "+77055550401", "type": "mobile"}
+    ]
+  },
+  {
+    "first_name": "Frank",
+    "surname": "Miller",
+    "email": "frank.miller@example.com",
+    "birthday": null,
+    "group": "Other",
+    "phones": [
+      {"phone": "+77065550501", "type": "mobile"}
+    ]
+  },
+  {
+    "first_name": "Grace",
+    "surname": "Wilson",
+    "email": "grace@family.net",
+    "birthday": "1975-12-25",
+    "group": "Family",
+    "phones": [
+      {"phone": "+77075550601", "type": "home"},
+      {"phone": "+77075550602", "type": "mobile"}
+    ]
+  },
+  {
+    "first_name": "Henry",
+    "surname": "Moore",
+    "email": "henry.moore@work.com",
+    "birthday": "1990-04-01",
+    "group": "Work",
+    "phones": [
+      {"phone": "+77085550701", "type": "work"}
+    ]
+  },
+  {
+    "first_name": "Irene",
+    "surname": "Taylor",
+    "email": "irene.t@gmail.com",
+    "birthday": "1997-08-17",
+    "group": "Friend",
+    "phones": [
+      {"phone": "+77095550801", "type": "mobile"},
+      {"phone": "+77095550802", "type": "home"}
+    ]
+  },
+  {
+    "first_name": "Jack",
+    "surname": "Anderson",
+    "email": "",
+    "birthday": "1983-03-30",
+    "group": "Other",
+    "phones": [
+      {"phone": "+77105550901", "type": "mobile"}
+    ]
+  }
+]

@@ -28,7 +28,7 @@ TSIS 01 continues Practice 07 and Practice 08 with a richer PhoneBook schema and
    - group filtering,
    - partial email search,
    - sorting by `name`, `birthday`, `date_added`,
-   - pagination navigation (`next / prev / quit`).
+   - pagination navigation (  `next / prev / quit`).
 5. Import/export:
    - export full contacts (with phones + group) to JSON,
    - import from JSON with per-duplicate `skip`/`overwrite`,

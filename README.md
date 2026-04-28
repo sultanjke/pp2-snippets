@@ -22,6 +22,9 @@ This repository collects Python practice snippets and practical exercises for Pr
 - [Practice 10 - Pygame Games](#practice-10---pygame-games)
 - [Practice 11 - Advanced Pygame Games](#practice-11---advanced-pygame-games)
 - [TSIS 01 - Extended PhoneBook](#tsis-01---extended-phonebook)
+- [TSIS 02 - Paint Application — Extended Drawing Tools](#tsis-02---paint-application--extended-drawing-tools)
+- [TSIS 03 - Racer Game — Advanced Driving, Leaderboard & Power-Ups](#tsis-03---racer-game--advanced-driving-leaderboard--power-ups)
+- [TSIS 04 - Snake Game — Database Integration & Advanced Gameplay](#tsis-04---snake-game--database-integration--advanced-gameplay)
 - [How to Run](#how-to-run)
 - [Repository Structure](#repository-structure)
 
@@ -176,13 +179,56 @@ This repository collects Python practice snippets and practical exercises for Pr
 
 ---
 
-## How to Run
+## TSIS 02 - Paint Application — Extended Drawing Tools
 
-Run a single file:
+> Extended Paint app from Practice 10–11 with freehand drawing, straight-line tool, adjustable brush sizes, flood-fill, text placement, and PNG canvas saving — all using only Pygame built-ins.
 
-```bash
-python "Practice 01/strings/split.py"
-```
+| # | Feature | Description | Files |
+|---|---------|-------------|-------|
+| 1 | **Pencil & Line tools** | Freehand pencil draws continuously along the cursor path; straight-line tool shows a live preview while dragging | [`tools.py`](TSIS%2002/tools.py), [`paint.py`](TSIS%2002/paint.py) |
+| 2 | **Brush sizes** | Three stroke widths — Small (2 px), Medium (5 px), Large (10 px) — selectable via keyboard `1`/`2`/`3` or on-screen S/M/L buttons; applies to all shape tools | [`paint.py`](TSIS%2002/paint.py) |
+| 3 | **Flood-fill tool** | Click inside any closed region to fill it with the active color; implemented with BFS using `pygame.Surface.get_at()` / `set_at()` | [`tools.py`](TSIS%2002/tools.py) |
+| 4 | **Save canvas** | Press `Ctrl+S` to export the canvas as a timestamped `.png` file via `pygame.image.save()` | [`paint.py`](TSIS%2002/paint.py) |
+| 5 | **Text tool** | Click to place a cursor, type characters with real-time preview, `Enter` to confirm, `Esc` to cancel | [`paint.py`](TSIS%2002/paint.py) |
+| 6 | **All Practice 11 shapes** | Pencil, line, rectangle, circle, square, right triangle, equilateral triangle, rhombus, eraser — all with adjustable brush size | [`paint.py`](TSIS%2002/paint.py) |
+
+> Run: `python "TSIS 02/paint.py"`
+
+---
+
+## TSIS 03 - Racer Game — Advanced Driving, Leaderboard & Power-Ups
+
+> Extended Racer from Practice 10–11 with lane hazards, road events, multiple traffic cars, three collectible power-ups, a race-distance finish line, a persistent JSON leaderboard, and full game screens.
+
+| # | Feature | Description | Files |
+|---|---------|-------------|-------|
+| 1 | **Lane hazards & road events** | Barrier (fatal), oil spill and pothole (slow debuff) obstacles scroll down in random lanes; nitro strip and speed-bump event strips flash across the full road width | [`racer.py`](TSIS%2003/racer.py) |
+| 2 | **Dynamic traffic & obstacles** | Multiple enemy cars (count set by difficulty); safe spawn logic prevents piling in the same lane; difficulty scales every 5 s — speed increases and extra enemies added | [`racer.py`](TSIS%2003/racer.py) |
+| 3 | **Power-ups** | Nitro (×1.6 speed, 4 s), Shield (absorbs one fatal collision), Repair (clears slow debuff); one active at a time; each expires after 6 s on the road if uncollected | [`racer.py`](TSIS%2003/racer.py) |
+| 4 | **Score, distance & leaderboard** | Score = coins × 10 + distance ÷ 5 + power-up bonuses; race-progress bar and remaining metres shown in HUD; top 10 saved to `leaderboard.json` | [`persistence.py`](TSIS%2003/persistence.py) |
+| 5 | **Game screens** | Main Menu, Name Entry, Settings (sound toggle, car color, difficulty), Leaderboard, Game Over (Retry / Main Menu) | [`ui.py`](TSIS%2003/ui.py) |
+| 6 | **Settings persistence** | Preferences saved to and loaded from `settings.json` on every run | [`persistence.py`](TSIS%2003/persistence.py), [`settings.json`](TSIS%2003/settings.json) |
+
+> Run: `python "TSIS 03/main.py"`
+
+---
+
+## TSIS 04 - Snake Game — Database Integration & Advanced Gameplay
+
+> Extended Snake from Practice 10–11 connected to a PostgreSQL database for persistent leaderboards, with poison food, three timed power-ups, level-based obstacle blocks, and four polished game screens.
+
+| # | Feature | Description | Files |
+|---|---------|-------------|-------|
+| 1 | **PostgreSQL leaderboard** | `players` + `game_sessions` schema auto-created on startup; result saved after every game over; Top 10 fetched and displayed in-game; personal best shown in the HUD during play | [`db.py`](TSIS%2004/db.py) |
+| 2 | **Poison food** | Dark-red item appears alongside normal food; eating it shrinks the snake by 2 segments — game over if length drops to 1 or less | [`game.py`](TSIS%2004/game.py) |
+| 3 | **Power-ups** | Speed Boost (+4 speed, 5 s), Slow Motion (−3 speed, 5 s), Shield (absorbs one wall/self collision); one on the field at a time, expires after 8 s; timers tracked with `pygame.time.get_ticks()` | [`game.py`](TSIS%2004/game.py) |
+| 4 | **Level obstacles** | From Level 3 onward, static wall blocks are randomly placed each level; BFS trap-check ensures the snake always has at least 8 reachable cells | [`game.py`](TSIS%2004/game.py) |
+| 5 | **Settings** | Snake color, grid overlay toggle, and sound toggle saved to and loaded from `settings.json` | [`config.py`](TSIS%2004/config.py), [`settings.json`](TSIS%2004/settings.json) |
+| 6 | **Game screens** | Main Menu (username entry + DB status), Settings, Leaderboard, Game Over (score, level, personal best, Retry / Main Menu) | [`main.py`](TSIS%2004/main.py) |
+
+> **Note:** Edit `DB_CONFIG` in [`db.py`](TSIS%2004/db.py) with your PostgreSQL credentials before running. The game runs in offline mode if the DB is unavailable.
+>
+> Run: `python "TSIS 04/main.py"`
 
 ---
 
@@ -318,6 +364,25 @@ pp2-snippets/
 |   |-- config.py
 |   |-- functions.sql
 |   `-- procedures.sql
+|-- TSIS 02/
+|   |-- paint.py
+|   |-- tools.py
+|   `-- assets/
+|-- TSIS 03/
+|   |-- main.py
+|   |-- racer.py
+|   |-- ui.py
+|   |-- persistence.py
+|   |-- settings.json
+|   |-- leaderboard.json
+|   `-- assets/
+|-- TSIS 04/
+|   |-- main.py
+|   |-- game.py
+|   |-- db.py
+|   |-- config.py
+|   |-- settings.json
+|   `-- assets/
 `-- README.md
 ```
 

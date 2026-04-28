@@ -38,7 +38,18 @@ def save_leaderboard(entries):
 
 def add_score(name, score, distance, coins):
     entries = load_leaderboard()
-    entries.append({"name": name, "score": score, "distance": distance, "coins": coins})
-    entries.sort(key=lambda e: e["score"], reverse=True)
-    entries = entries[:10]
+
+    # Deduplicate existing entries — one record per player, keep their best
+    best_by_name = {}
+    for e in entries:
+        n = e["name"]
+        if n not in best_by_name or e["score"] > best_by_name[n]["score"]:
+            best_by_name[n] = e
+
+    # Add or update this player's record only when they beat their own best
+    if name not in best_by_name or score > best_by_name[name]["score"]:
+        best_by_name[name] = {"name": name, "score": score,
+                               "distance": distance, "coins": coins}
+
+    entries = sorted(best_by_name.values(), key=lambda e: e["score"], reverse=True)[:10]
     save_leaderboard(entries)

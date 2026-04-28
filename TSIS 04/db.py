@@ -1,12 +1,11 @@
 import psycopg2
 
-# Edit these credentials to match your local PostgreSQL setup
 DB_CONFIG = {
     "host":     "localhost",
     "port":     5432,
-    "dbname":   "postgres",
+    "dbname":   "snakeDB",
     "user":     "postgres",
-    "password": "your_password_here",
+    "password": "postgres",
 }
 
 
@@ -61,15 +60,19 @@ def save_result(username, score, level):
 
 
 def get_leaderboard():
-    # Returns list of (username, score, level_reached, played_at)
+    # Returns list of (username, best_score, level_reached, played_at) — one row per player
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute("""
-                SELECT p.username, s.score, s.level_reached,
-                       TO_CHAR(s.played_at, 'YYYY-MM-DD') AS day
-                FROM game_sessions s
-                JOIN players p ON s.player_id = p.id
-                ORDER BY s.score DESC
+                SELECT username, score, level_reached, day FROM (
+                    SELECT DISTINCT ON (p.id)
+                           p.username, s.score, s.level_reached,
+                           TO_CHAR(s.played_at, 'YYYY-MM-DD') AS day
+                    FROM game_sessions s
+                    JOIN players p ON s.player_id = p.id
+                    ORDER BY p.id, s.score DESC
+                ) best
+                ORDER BY score DESC
                 LIMIT 10
             """)
             return cur.fetchall()

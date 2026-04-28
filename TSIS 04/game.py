@@ -1,3 +1,5 @@
+import array
+import math
 import random
 import pygame
 from config import (CELL_SIZE, GRID_COLS, GRID_ROWS, HUD_HEIGHT,
@@ -47,6 +49,23 @@ def snake_is_trapped(head, obstacles, snake):
     return len(visited) < 8
 
 
+def _gen_tone(freq, ms, vol=0.4, rate=44100):
+    n = int(rate * ms / 1000)
+    buf = array.array('h', [0] * n)
+    for i in range(n):
+        buf[i] = int(vol * 32767 * math.sin(2 * math.pi * freq * i / rate))
+    return pygame.mixer.Sound(buffer=buf)
+
+
+def make_sounds():
+    return {
+        "eat":      _gen_tone(660, 80),
+        "poison":   _gen_tone(200, 300, vol=0.5),
+        "powerup":  _gen_tone(880, 150),
+        "gameover": _gen_tone(160, 500, vol=0.6),
+    }
+
+
 class SnakeGame:
     def __init__(self, screen, settings, username, personal_best, db_available):
         self.screen        = screen
@@ -54,8 +73,10 @@ class SnakeGame:
         self.personal_best = personal_best
         self.db_available  = db_available
 
-        self.snake_color = tuple(settings.get("snake_color", [45, 185, 70]))
+        self.snake_color  = tuple(settings.get("snake_color", [45, 185, 70]))
         self.grid_overlay = settings.get("grid_overlay", True)
+        self.sound_on     = settings.get("sound", False)
+        self.sounds       = make_sounds() if self.sound_on else {}
 
         self.hud_font  = pygame.font.SysFont("arial", 22, bold=True)
         self.info_font = pygame.font.SysFont("arial", 17)
@@ -63,6 +84,10 @@ class SnakeGame:
         self.clock     = pygame.time.Clock()
 
         self.reset()
+
+    def _play(self, name):
+        if self.sound_on and name in self.sounds:
+            self.sounds[name].play()
 
     def reset(self):
         sx, sy = GRID_COLS // 2, GRID_ROWS // 2
@@ -73,9 +98,9 @@ class SnakeGame:
         self.level         = 1
         self.speed         = BASE_SPEED
         self.obstacles     = set()
+        self.poison        = None
 
         self.food          = self._make_food()
-        self.poison        = None
         self.poison_timer  = pygame.time.get_ticks() + random.randint(5000, 10000)
 
         # Power-up on the field (only one at a time)
@@ -225,6 +250,7 @@ class SnakeGame:
                 # Shield absorbs the collision; snake stays put this tick
                 self.shield_ready = False
                 return
+            self._play("gameover")
             self.game_over = True
             return
 
@@ -232,11 +258,13 @@ class SnakeGame:
 
         # Eat normal food
         if new_head == self.food["pos"]:
+            self._play("eat")
             self.score += self.food["weight"]
             self._update_level()
             self.food = self._make_food()
         # Eat poison
         elif self.poison and new_head == self.poison["pos"]:
+            self._play("poison")
             self.poison = None
             self.poison_timer = now + random.randint(5000, 10000)
             # Shrink snake by 2; game over if too short
@@ -244,10 +272,12 @@ class SnakeGame:
                 if len(self.snake) > 1:
                     self.snake.pop()
             if len(self.snake) <= 1:
+                self._play("gameover")
                 self.game_over = True
                 return
         # Collect power-up
         elif self.field_powerup and new_head == self.field_powerup["pos"]:
+            self._play("powerup")
             self._apply_powerup(self.field_powerup["kind"])
             self.field_powerup = None
             self.pu_spawn_time = now + random.randint(8000, 15000)

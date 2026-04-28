@@ -1,3 +1,5 @@
+import array
+import math
 import random
 import pygame
 
@@ -114,6 +116,26 @@ def make_road_strip(kind):
     lbl = font.render(label, True, (255, 255, 255))
     surf.blit(lbl, lbl.get_rect(center=(ROAD_WIDTH // 2, 11)))
     return surf
+
+
+# ---------------------------------------------------------------------------
+# Sound helpers
+# ---------------------------------------------------------------------------
+
+def _gen_tone(freq, ms, vol=0.4, rate=44100):
+    n = int(rate * ms / 1000)
+    buf = array.array('h', [0] * n)
+    for i in range(n):
+        buf[i] = int(vol * 32767 * math.sin(2 * math.pi * freq * i / rate))
+    return pygame.mixer.Sound(buffer=buf)
+
+
+def make_sounds():
+    return {
+        "coin":    _gen_tone(880, 80),
+        "powerup": _gen_tone(660, 200),
+        "crash":   _gen_tone(180, 400, vol=0.6),
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -291,6 +313,9 @@ class RacerGame:
         self.road_img  = make_road()
         self.coin_base = make_coin()
 
+        self.sound_on = settings.get("sound", False)
+        self.sounds   = make_sounds() if self.sound_on else {}
+
         self.base_speed  = self.config["speed"]
         self.player      = Player(settings.get("car_color", "blue"))
 
@@ -322,6 +347,10 @@ class RacerGame:
         pygame.time.set_timer(self.EV_OBSTACLE, 2200)
         pygame.time.set_timer(self.EV_POWERUP,  7000)
         pygame.time.set_timer(self.EV_STRIP,    9000)
+
+    def _play(self, name):
+        if self.sound_on and name in self.sounds:
+            self.sounds[name].play()
 
     def _all_sprites(self):
         return (list(self.enemies) + list(self.coins) +
@@ -381,6 +410,7 @@ class RacerGame:
                 self.player.consume_shield()
                 hit._reset()
             else:
+                self._play("crash")
                 return "dead"
 
         # Obstacle hit
@@ -390,6 +420,7 @@ class RacerGame:
                     self.player.consume_shield()
                     obs.kill()
                 else:
+                    self._play("crash")
                     return "dead"
             else:
                 # Oil or pothole — slow the player
@@ -400,6 +431,7 @@ class RacerGame:
         for pu in pygame.sprite.spritecollide(self.player, self.powerups, dokill=True):
             self.player.apply_powerup(pu.kind)
             self.powerup_bonus += 50
+            self._play("powerup")
 
         # Road strip events
         for strip in pygame.sprite.spritecollide(self.player, self.road_strips, False):
@@ -414,6 +446,7 @@ class RacerGame:
         # Coins collected
         for coin in pygame.sprite.spritecollide(self.player, self.coins, dokill=True):
             self.coins_collected += coin.weight
+            self._play("coin")
 
         return "ok"
 

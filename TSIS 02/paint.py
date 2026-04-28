@@ -8,18 +8,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from tools import BRUSH_SIZES, flood_fill
 
-# ---------------------------------------------------------------------------
-# Window and canvas sizes
-# ---------------------------------------------------------------------------
 WINDOW_WIDTH = 1000
 WINDOW_HEIGHT = 700
 TOOLBAR_HEIGHT = 140          # space at the top for buttons and palette
 CANVAS_WIDTH = WINDOW_WIDTH
 CANVAS_HEIGHT = WINDOW_HEIGHT - TOOLBAR_HEIGHT  # drawable area below toolbar
-
-# ---------------------------------------------------------------------------
-# All tool names — shown as buttons in the toolbar
-# ---------------------------------------------------------------------------
 
 TOOL_NAMES = [
     "pencil",    "line",      "rectangle", "circle",
@@ -59,10 +52,6 @@ PALETTE = [
 # Labels for the size buttons (keyboard shortcuts shown in brackets)
 SIZE_LABELS = ["S (1)", "M (2)", "L (3)"]
 
-
-# ---------------------------------------------------------------------------
-# Main application class
-# ---------------------------------------------------------------------------
 class PaintApp:
     def __init__(self):
         pygame.init()
@@ -122,15 +111,9 @@ class PaintApp:
         self.eraser_cursor, self.eraser_hotspot = self.make_eraser_cursor()
         pygame.mouse.set_visible(False)  # hide the default OS cursor
 
-    # -------------------------------------------------------------------------
-    # Helper: current brush size in pixels
-    # -------------------------------------------------------------------------
     def brush_size(self):
         return BRUSH_SIZES[self.brush_size_idx]
 
-    # -------------------------------------------------------------------------
-    # Build toolbar geometry
-    # -------------------------------------------------------------------------
     def build_toolbar(self):
         # --- Tool buttons: 3 rows x 4 columns --------------------------------
         btn_w, btn_h = 112, 28
@@ -165,10 +148,6 @@ class PaintApp:
             y = btn_y0 + i * (size_h + size_gap)
             self.size_buttons.append((i, pygame.Rect(size_x, y, size_w, size_h)))
 
-    # -------------------------------------------------------------------------
-    # Convert a screen position to a canvas-relative position
-    # Returns None if the point is outside the canvas area
-    # -------------------------------------------------------------------------
     def get_canvas_pos(self, screen_pos):
         sx, sy = screen_pos
         cy = sy - TOOLBAR_HEIGHT
@@ -176,9 +155,6 @@ class PaintApp:
             return (sx, cy)
         return None
 
-    # -------------------------------------------------------------------------
-    # Custom cursor surfaces
-    # -------------------------------------------------------------------------
     def make_pen_cursor(self):
         surf = pygame.Surface((26, 26), pygame.SRCALPHA)
         pygame.draw.polygon(surf, (60, 70, 85),    [(5, 3), (21, 19), (16, 24), (0, 8)])
@@ -194,9 +170,7 @@ class PaintApp:
         pygame.draw.rect(surf, (95, 95, 100),   (4, 6, 18, 14), width=2, border_radius=4)
         return surf, (13, 13)
 
-    # -------------------------------------------------------------------------
-    # Geometry helpers — compute points/rects from drag start and end
-    # -------------------------------------------------------------------------
+
     def drag_rect(self, a, b):
         # Bounding rectangle that covers the drag from a to b
         return pygame.Rect(
@@ -267,9 +241,6 @@ class PaintApp:
         t = max(0.0, min(1.0, ((px - ax) * dx + (py - ay) * dy) / (dx * dx + dy * dy)))
         return math.hypot(px - ax - t * dx, py - ay - t * dy)
 
-    # -------------------------------------------------------------------------
-    # Draw a single shape dict onto a surface
-    # -------------------------------------------------------------------------
     def draw_shape(self, surface, shape):
         shape_type = shape["type"]
         color = tuple(shape["color"])
@@ -296,10 +267,6 @@ class PaintApp:
         elif shape_type in ("right_tri", "eq_tri", "rhombus"):
             pygame.draw.polygon(surface, color, list(shape["points"]), width=width)
 
-    # -------------------------------------------------------------------------
-    # Rebuild canvas from scratch using stored shapes + fills + texts.
-    # Called after any structural change (e.g. right-click delete).
-    # -------------------------------------------------------------------------
     def rebuild_canvas(self):
         self.canvas.fill((255, 255, 255))
 
@@ -320,9 +287,6 @@ class PaintApp:
             rendered = self.text_font.render(t["text"], True, t["color"])
             self.canvas.blit(rendered, t["pos"])
 
-    # -------------------------------------------------------------------------
-    # Check if a point on the canvas is close enough to a shape to hit it
-    # -------------------------------------------------------------------------
     def shape_hit(self, pt, shape):
         shape_type = shape["type"]
 
@@ -348,9 +312,6 @@ class PaintApp:
 
         return False
 
-    # -------------------------------------------------------------------------
-    # Save the canvas as a PNG file with a timestamp in the filename
-    # -------------------------------------------------------------------------
     def save_canvas(self):
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         save_dir = Path(__file__).resolve().parent
@@ -359,9 +320,6 @@ class PaintApp:
         # Show a brief confirmation message in the toolbar
         self.save_message = (f"Saved: canvas_{timestamp}.png", pygame.time.get_ticks())
 
-    # -------------------------------------------------------------------------
-    # Confirm the current text and burn it onto the canvas
-    # -------------------------------------------------------------------------
     def commit_text(self):
         if not self.text_buffer or self.text_pos is None:
             return
@@ -375,9 +333,6 @@ class PaintApp:
         rendered = self.text_font.render(self.text_buffer, True, self.current_color)
         self.canvas.blit(rendered, self.text_pos)
 
-    # -------------------------------------------------------------------------
-    # Keyboard handler
-    # -------------------------------------------------------------------------
     def handle_keydown(self, event):
         # --- Text mode: route all keys to text input -------------------------
         if self.text_active:
@@ -398,7 +353,6 @@ class PaintApp:
                 self.text_buffer += event.unicode
             return  # don't process global shortcuts while typing
 
-        # --- Global shortcuts ------------------------------------------------
         mods = pygame.key.get_mods()
 
         if event.key == pygame.K_ESCAPE:
@@ -416,9 +370,6 @@ class PaintApp:
         elif event.key == pygame.K_3:
             self.brush_size_idx = 2   # large
 
-    # -------------------------------------------------------------------------
-    # Mouse button down (left)
-    # -------------------------------------------------------------------------
     def handle_left_down(self, pos):
         # Check if a tool button was clicked
         for name, rect in self.tool_buttons:
@@ -467,9 +418,6 @@ class PaintApp:
         if self.current_tool in ("pencil", "eraser"):
             self.active_stroke = [canvas_pos]
 
-    # -------------------------------------------------------------------------
-    # Mouse motion — update the current drag end position
-    # -------------------------------------------------------------------------
     def handle_motion(self, pos):
         if not self.is_drawing:
             return
@@ -482,9 +430,6 @@ class PaintApp:
             if not self.active_stroke or self.active_stroke[-1] != canvas_pos:
                 self.active_stroke.append(canvas_pos)
 
-    # -------------------------------------------------------------------------
-    # Mouse button down (right) — delete the topmost shape under cursor
-    # -------------------------------------------------------------------------
     def handle_right_down(self, pos):
         canvas_pos = self.get_canvas_pos(pos)
         if canvas_pos is None:
@@ -496,9 +441,6 @@ class PaintApp:
                 self.rebuild_canvas()
                 return
 
-    # -------------------------------------------------------------------------
-    # Mouse button up (left) — commit the finished shape
-    # -------------------------------------------------------------------------
     def handle_left_up(self, pos):
         if not self.is_drawing:
             return
@@ -512,9 +454,6 @@ class PaintApp:
         self.current_pos = None
         self.active_stroke = []
 
-    # -------------------------------------------------------------------------
-    # Build and store the finished shape after mouse release
-    # -------------------------------------------------------------------------
     def commit_shape(self, end):
         tool = self.current_tool
         bs = self.brush_size()
@@ -615,9 +554,6 @@ class PaintApp:
                 })
                 self.rebuild_canvas()
 
-    # -------------------------------------------------------------------------
-    # Draw the toolbar area at the top of the screen
-    # -------------------------------------------------------------------------
     def draw_toolbar(self):
         # Toolbar background
         pygame.draw.rect(self.screen, (228, 230, 238), (0, 0, WINDOW_WIDTH, TOOLBAR_HEIGHT))
@@ -672,9 +608,6 @@ class PaintApp:
             else:
                 self.save_message = None
 
-    # -------------------------------------------------------------------------
-    # Draw a ghost preview of the shape being dragged
-    # -------------------------------------------------------------------------
     def draw_preview(self):
         # Show a live preview of text while the user types
         if self.text_active and self.text_pos is not None:
@@ -753,9 +686,6 @@ class PaintApp:
                 shifted = [(x, y + TOOLBAR_HEIGHT) for x, y in pts]
                 pygame.draw.polygon(self.screen, col, shifted, width=max(1, bs))
 
-    # -------------------------------------------------------------------------
-    # Draw a custom cursor that matches the active tool
-    # -------------------------------------------------------------------------
     def draw_cursor(self):
         mx, my = pygame.mouse.get_pos()
 
@@ -784,9 +714,6 @@ class PaintApp:
             pygame.draw.line(self.screen, (30, 30, 30), (mx - 8, my), (mx + 8, my), 1)
             pygame.draw.line(self.screen, (30, 30, 30), (mx, my - 8), (mx, my + 8), 1)
 
-    # -------------------------------------------------------------------------
-    # Render everything each frame
-    # -------------------------------------------------------------------------
     def draw(self):
         # Background behind the canvas
         self.screen.fill((220, 222, 228))
@@ -796,9 +723,6 @@ class PaintApp:
         self.draw_preview()
         self.draw_cursor()
 
-    # -------------------------------------------------------------------------
-    # Main game loop
-    # -------------------------------------------------------------------------
     def run(self):
         running = True
 

@@ -25,7 +25,6 @@ This repository collects Python practice snippets and practical exercises for Pr
 - [TSIS 02 - Paint Application — Extended Drawing Tools](#tsis-02---paint-application--extended-drawing-tools)
 - [TSIS 03 - Racer Game — Advanced Driving, Leaderboard & Power-Ups](#tsis-03---racer-game--advanced-driving-leaderboard--power-ups)
 - [TSIS 04 - Snake Game — Database Integration & Advanced Gameplay](#tsis-04---snake-game--database-integration--advanced-gameplay)
-- [How to Run](#how-to-run)
 - [Repository Structure](#repository-structure)
 
 ---
